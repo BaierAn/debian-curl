@@ -2,6 +2,6 @@ FROM debian:latest
 RUN apt update
 RUN apt-get install -y curl 
 
-ADD ./entrypoint.sh /
+ADD ./edge/entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["./edge/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
